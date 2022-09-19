@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- All of the meta data for the page belongs in the header tag -->
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/styles.css">
+	<title>Projects</title>
+</head>
+
+<body>
+	<header>
+		<nav>
+			<ul>
+				<li><a href="index.html">Homepage</a></li>
+				<li><a href="experiences.html">Experiences</a></li>
+				<li class="active"><a href="projects.html">Projects</a></li>
+				<li><a href="gallery.html">Gallery</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<main>
+		<h1>Projects</h1>
+		<ul> 
+			<li><a href="#EKF_PF">State Estimation with Extended Kalman Filter (EKF) and Particle Filter (PF)</a></li>
+			<li><a href="#PointCloud">Point Cloud Processing: Point Cloud Registration Enhancement</a></li>
+		</ul>
+		<h2 id="EKF_PF">State Estimation with Extended Kalman Filter (EKF) and Particle Filter (PF)</h2>
+		<p>
+			Describe the problem and the goal. 
+			Short summary: Estimated an object's 3D position from two cameras using EKF and PF with sequential measurement update.
+		</p>
+		<figure>
+			<img src="images/EKF_PF_problemSetup.PNG" width="500" alt="EKF & PF problem image unavailable"/>
+			<figcaption>Problem setup for Extended Kalman Filter(EKF) & Particle Filter(PF)</figcaption>
+		</figure>
+		<p>
+			Describe the algorithm implementation, major equations.
+			Add results and summary at the end.
+		</p>
+		<figure>
+			<img src="images/EKF_PF_results.PNG" width="500" alt="EKF & PF results image unavailable"/>
+			<figcaption>Results of Extended Kalman Filter(EKF) & Particle Filter(PF)</figcaption>
+		</figure>
+	
+
+		<h2 id="PointCloud">Point Cloud Processing: Point Cloud Registration Enhancement</h2>
+		<p>
+			Describe the problem and the goal. 
+			Short summary: Utilized Point Feature Histogram (PFH) and Iterative Closest Point (ICP) for enhancing point cloud registration.
+		</p>
+		<figure>
+			<img src="images/PCP_2Sets_initial.PNG" width="500" alt="2 sets of initial Point Cloud Processing image unavailable"/>
+			<figcaption>2 sets of initial point clouds</figcaption>
+		</figure>
+		<p>
+			Describe the algorithm implementation, major equations.
+			Add results and summary at the end.
+		</p>
+		<figure>
+			<img src="images/PCP_methodsCompare.PNG" width="500" alt="Point cloud methods compare image unavailable"/>
+			<figcaption>Comparison between different methods</figcaption>
+		</figure>
+		<figure>
+			<img src="images/PCP_2Sets_results.PNG" width="500" alt="2 sets of Point Cloud Processing result image unavailable"/>
+			<figcaption>Results of Point cloud processing</figcaption>
+		</figure>
+	</main>
+
+	<footer>
+		&copy; 2022
+		<a href = "mailto: mybenlo@umich.edu">mybenlo@umich.edu</a>
+	</footer>
+</body>
+</html>
