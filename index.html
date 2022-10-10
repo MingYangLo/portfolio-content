@@ -6,42 +6,71 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="css/html5reset.css">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Homepage</title>
 </head>
 
 <body>
 	<header>
-		<nav>
-			<ul>
-				<li class="active"><a href="index.html">Homepage</a></li>
-				<li><a href="experiences.html">Experiences</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
+		<nav class="navbar">
+			<div class="logo">Ming-Yang Lo</div>
+			<ul class="menu">
+				<li><a href="index.html" class="currentPage">Homepage</a>
+					<ul class="dropdown">
+						<li><a href="index.html#aboutMe">About Me</a></li>
+						<li><a href="index.html#skills">Skills</a></li>
+					</ul>
+				</li>
+				<li><a href="experiences.html">Experiences</a>
+					<ul class="dropdown">
+						<li><a href="experiences.html#workExperiences">Work Experiences</a></li>
+						<li><a href="experiences.html#learnings">Free Time Learnings</a></li>
+					</ul>
+				</li>
+				<li><a href="projects.html">Projects</a>
+					<ul class="dropdown">
+						<li><a href="projects.html#EKF_PF">Extended Kalman Filter & Particle Filter</a></li>
+						<li><a href="projects.html#PointCloud">Point Cloud Registration</a></li>
+					</ul>
+				</li>
+				<li><a href="gallery.html">Gallery</a>
+					<ul class="dropdown">
+						<li><a href="gallery.html#Yosemite">Yosemite</a></li>
+						<li><a href="gallery.html#NorthernMichigan"> Northern Michigan</a></li>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
 		<h1>Homepage</h1>
-		<ul>
-			<li><a href="#aboutMe">About me</a></li>
-			<li><a href="#skills">Skills</a></li>
-		</ul>
-
-		<h2 id="aboutme">About Me</h2>
+		<nav class="insideNav">
+			<a href="#aboutMe">About Me</a>
+			<a>|</a>
+			<a href="#skills">Skills</a>
+		</nav>
+		
 		<figure>
-			<img src="images/profile.jpg" width="500" alt="Profile image unavailable"/>
+			<img src="images/profile.jpg" width="500" alt="Profile image unavailable">
 		</figure>
+		<h2 id="aboutMe">About Me</h2>
 		<p>
-			Describe the academic and working background.
-			Add to last: I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
+			I'm Ming-Yang Lo, a current Master's student in Electrical & Computing Engineering.
+			In my Bachelor's years, I double majored in Computer Science & Mechanical Engineering.
+			Programming is one of the things I always found of. 
+			It's fascinating that through programming I could put my ideas and new acquired knowledges into practice.
+			I'm open to Job opportunities where I can contribute, learn and grow. If you have a good opportunity that matches my skills and experience then don't hesitate to contact me.
 		</p>
 
 		<h2 id="skills">Skills</h2>
 		<p>
-			Describe skills I current have and attitude towards other skills.
-			Briefly speaking: My skills are wideranging, spanning across multiple disciplines. Base on the academic & working background, the areas are mainly surrounding Computer Science, Electrical & Computer Engineering, and Mechanical Engineering.
+			My skills are wideranging, spanning across multiple disciplines. 
+			Base on the academic & working experience, my skills areas are mainly surrounding Computer Science, Electrical & Computer Engineering, and Mechanical Engineering.
+			The first programming language I learnt is C++, and that is also the one I am most familiar with.
+			C# is another programming language I like to use, especially when needed to create graphical user interface.
+			Python is mostly for machine learning & deep learning, it has great library & framework like Pytorch.
+			The following are some skill-sets I most familiar with: 
 		</p>
 		<h3>Programming Languages</h3>
 		<ul>
@@ -62,7 +91,7 @@
 
 	<footer>
 		&copy; 2022
-		<a href = "mailto: mybenlo@umich.edu">mybenlo@umich.edu</a>
+		<a href="mailto:mybenlo@umich.edu">mybenlo@umich.edu</a>
 	</footer>
 </body>
 </html>

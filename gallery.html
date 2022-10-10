@@ -6,18 +6,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="css/html5reset.css">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Gallery</title>
 </head>
 
 <body>
 	<header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Homepage</a></li>
-				<li><a href="experiences.html">Experiences</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li class="active"><a href="gallery.html">Gallery</a></li>
+		<nav class="navbar">
+			<div class="logo">Ming-Yang Lo</div>
+			<ul class="menu">
+				<li><a href="index.html">Homepage</a>
+					<ul class="dropdown">
+						<li><a href="index.html#aboutMe">About Me</a></li>
+						<li><a href="index.html#skills">Skills</a></li>
+					</ul>
+				</li>
+				<li><a href="experiences.html">Experiences</a>
+					<ul class="dropdown">
+						<li><a href="experiences.html#workExperiences">Work Experiences</a></li>
+						<li><a href="experiences.html#learnings">Free Time Learnings</a></li>
+					</ul>
+				</li>
+				<li><a href="projects.html">Projects</a>
+					<ul class="dropdown">
+						<li><a href="projects.html#EKF_PF">Extended Kalman Filter & Particle Filter</a></li>
+						<li><a href="projects.html#PointCloud">Point Cloud Registration</a></li>
+					</ul>
+				</li>
+				<li><a href="gallery.html" class="currentPage">Gallery</a>
+					<ul class="dropdown">
+						<li><a href="gallery.html#Yosemite">Yosemite</a></li>
+						<li><a href="gallery.html#NorthernMichigan"> Northern Michigan</a></li>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -30,8 +51,9 @@
 
 		<h2 id='Yosemite'>Yosemite</h2>
 		<p>
-			Write down the experience of the Yosemite trip. 
-			Describe the displayed images (Yosemite Falls, Tenaya Lake, Olmsted Point, Tunnel View, and Mono Lake).
+			Yosemite National Park is in the Sierra Nevada mountains of California.
+			It is known for its waterfalls and many other natural landscapes.
+			The displayed images are taken during my trip visiting Yosemite (Yosemite Falls, Tenaya Lake, Olmsted Point, Tunnel View, and Mono Lake).
 		</p>
 		<figure>
 			<img src="images/YosemiteFalls.jpg" width="500" alt="Yosemite Falls image unavailable"/>
@@ -56,8 +78,8 @@
 
 		<h2 id='NorthernMichigan'>Northern Michigan</h2>
 		<p>
-			Write down the experience of the Northern Michigan trip. 
-			Describe the displayed images (Silver Lake, Winery, and Lake Michell).
+			Northern Michigan is known for its lakeview and many other natural landscapes.
+			The displayed images are taken during my trip visiting some parts of Northern Michigan (Silver Lake, Winery, and Lake Michell).
 		</p>
 		<figure>
 			<img src="images/SilverLakeBuggyRide.png" width="500" alt="Silver Lake Buggy Ride image unavailable"/>
@@ -75,7 +97,7 @@
 
 	<footer>
 		&copy; 2022
-		<a href = "mailto: mybenlo@umich.edu">mybenlo@umich.edu</a>
+		<a href="mailto:mybenlo@umich.edu">mybenlo@umich.edu</a>
 	</footer>
 </body>
 </html>

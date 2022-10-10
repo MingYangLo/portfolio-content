@@ -6,18 +6,39 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="css/html5reset.css">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Projects</title>
 </head>
 
 <body>
 	<header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Homepage</a></li>
-				<li><a href="experiences.html">Experiences</a></li>
-				<li class="active"><a href="projects.html">Projects</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
+		<nav class="navbar">
+			<div class="logo">Ming-Yang Lo</div>
+			<ul class="menu">
+				<li><a href="index.html">Homepage</a>
+					<ul class="dropdown">
+						<li><a href="index.html#aboutMe">About Me</a></li>
+						<li><a href="index.html#skills">Skills</a></li>
+					</ul>
+				</li>
+				<li><a href="experiences.html">Experiences</a>
+					<ul class="dropdown">
+						<li><a href="experiences.html#workExperiences">Work Experiences</a></li>
+						<li><a href="experiences.html#learnings">Free Time Learnings</a></li>
+					</ul>
+				</li>
+				<li><a href="projects.html" class="currentPage">Projects</a>
+					<ul class="dropdown">
+						<li><a href="projects.html#EKF_PF">Extended Kalman Filter & Particle Filter</a></li>
+						<li><a href="projects.html#PointCloud">Point Cloud Registration</a></li>
+					</ul>
+				</li>
+				<li><a href="gallery.html">Gallery</a>
+					<ul class="dropdown">
+						<li><a href="gallery.html#Yosemite">Yosemite</a></li>
+						<li><a href="gallery.html#NorthernMichigan"> Northern Michigan</a></li>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -30,16 +51,19 @@
 		</ul>
 		<h2 id="EKF_PF">State Estimation with Extended Kalman Filter (EKF) and Particle Filter (PF)</h2>
 		<p>
-			Describe the problem and the goal. 
-			Short summary: Estimated an object's 3D position from two cameras using EKF and PF with sequential measurement update.
+			The main objective is to estimate an object's 3D position from two cameras using Extended Kalman Filter (EKF) and Particle Filter (PF) with sequential measurement update.
 		</p>
 		<figure>
 			<img src="images/EKF_PF_problemSetup.PNG" width="500" alt="EKF & PF problem image unavailable"/>
 			<figcaption>Problem setup for Extended Kalman Filter(EKF) & Particle Filter(PF)</figcaption>
 		</figure>
 		<p>
-			Describe the algorithm implementation, major equations.
-			Add results and summary at the end.
+			Extended Kalman filter vs Kalman filter?
+			Kalman filter is an approach based on recursice Bayesian filtering where the noise in the system is assumed Gaussian.
+			Extended Kalman filter (EKF) is an extension of KT for non-linear systems where non-linearity are approxiamted using the first or second order derivative. 
+			The idea of ​​the particle filter (PF) is based on Monte Carlo methods, which use particle sets to represent probabilities and can be used in any form of state space model. 
+			The core idea is to express its distribution by extracting random state particles from the posterior probability.
+			The result was to able to reduced estimated position error by 2.1% and 7.3% respectively by using batch measurement update.
 		</p>
 		<figure>
 			<img src="images/EKF_PF_results.PNG" width="500" alt="EKF & PF results image unavailable"/>
@@ -49,16 +73,21 @@
 
 		<h2 id="PointCloud">Point Cloud Processing: Point Cloud Registration Enhancement</h2>
 		<p>
-			Describe the problem and the goal. 
-			Short summary: Utilized Point Feature Histogram (PFH) and Iterative Closest Point (ICP) for enhancing point cloud registration.
+			The objective is to utilize Point Feature Histogram (PFH) and Iterative Closest Point (ICP) for enhancing point cloud registration.
 		</p>
 		<figure>
 			<img src="images/PCP_2Sets_initial.PNG" width="500" alt="2 sets of initial Point Cloud Processing image unavailable"/>
 			<figcaption>2 sets of initial point clouds</figcaption>
 		</figure>
 		<p>
-			Describe the algorithm implementation, major equations.
-			Add results and summary at the end.
+			Point clouds are often aligned with 3D models or with other point clouds, a process known as pointset registration. 
+			The aim is to find a rigid transformation among these point clouds.
+			Iterative closest point (ICP) is a powerful algorithm employed by a robot to accomplish these tasks by estimating pose variation between two successive data frames. 
+			However, the drawback of ICP is that it does not take geometric information into account and is sensitive to initial correspondences of the two point clouds.
+			This project solves the problems mentioned above by implementing another algorithm - Point Feature Histogram (PFH), which provides a better solution to registration since it incorporates more informative geometric features when matching the correspondence. 
+			To be more specific, the key component in PFH is to estimate surface normal and curvature for a point with its k-nearest neighbor and further formulate associate local features. 
+			These features enable us to find more the accuracy during the correspondence calculation process.
+			As for the result, we decreased 22% of total time through extracting key features with Intrinsic Shape Signature in a dense point cloud.
 		</p>
 		<figure>
 			<img src="images/PCP_methodsCompare.PNG" width="500" alt="Point cloud methods compare image unavailable"/>
@@ -72,7 +101,7 @@
 
 	<footer>
 		&copy; 2022
-		<a href = "mailto: mybenlo@umich.edu">mybenlo@umich.edu</a>
+		<a href="mailto:mybenlo@umich.edu">mybenlo@umich.edu</a>
 	</footer>
 </body>
 </html>

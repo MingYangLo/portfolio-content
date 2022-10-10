@@ -6,44 +6,76 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="css/html5reset.css">
-	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/style.css">
 	<title>Experiences</title>
 </head>
 
 <body>
 	<header>
-		<nav>
-			<ul>
-				<li><a href="index.html">Homepage</a></li>
-				<li class="active"><a href="experiences.html">Experiences</a></li>
-				<li><a href="projects.html">Projects</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
+		<nav class="navbar">
+			<div class="logo">Ming-Yang Lo</div>
+			<ul class="menu">
+				<li><a href="index.html">Homepage</a>
+					<ul class="dropdown">
+						<li><a href="index.html#aboutMe">About Me</a></li>
+						<li><a href="index.html#skills">Skills</a></li>
+					</ul>
+				</li>
+				<li><a href="experiences.html" class="currentPage">Experiences</a>
+					<ul class="dropdown">
+						<li><a href="experiences.html#workExperiences">Work Experiences</a></li>
+						<li><a href="experiences.html#learnings">Free Time Learnings</a></li>
+					</ul>
+				</li>
+				<li><a href="projects.html">Projects</a>
+					<ul class="dropdown">
+						<li><a href="projects.html#EKF_PF">Extended Kalman Filter & Particle Filter</a></li>
+						<li><a href="projects.html#PointCloud">Point Cloud Registration</a></li>
+					</ul>
+				</li>
+				<li><a href="gallery.html">Gallery</a>
+					<ul class="dropdown">
+						<li><a href="gallery.html#Yosemite">Yosemite</a></li>
+						<li><a href="gallery.html#NorthernMichigan"> Northern Michigan</a></li>
+					</ul>
+				</li>
 			</ul>
 		</nav>
 	</header>
 
 	<main>
 		<h1>Experiences</h1>
-		<ul> 
-			<li><a href="#workExperiences">Work Experiences</a></li>
-			<li><a href="#learnings">Free Time Learnings</a></li>
-		</ul>
-		<h2 id="workExperiences"></h2>
+		<nav class="insideNav">
+			<a href="#workExperiences">Work Experiences</a>
+			<a>|</a>
+			<a href="#learnings">Free Time Learnings</a>
+		</nav>
+		
+		<h2 id="workExperiences">Work Experiences</h2>
 		<p>
-			Summarize the past internships.
-			Write down some work descriptions for each internships experiences. 
+			Till now, I have three internship experiences.
+			The most recent is a software algorithms internship. I developed a graphical user interface for processing over 20+ medical image algorithms.
+			The differences in the algorithms' results are also compared for an ongoing platform transformation.
+			Another internship I did is participating in the development of a sensor-based intelligent diagnosis maintenance system.
+			What the system does is analyze the data extracted from vibration sensors and determine if there are malfunction or hazard in the manufacturing/assembly process.
+			My first internship was to analyze the testing data of electrical and pneumatic hand-tools. After the analyzing, the tools' performance would be improved through modifying components.
+			During this internship period, I gain a great experience and perspective on how manufacuring company performs by working with multiple departments including quality assurance, assembly, design & development, and validation. 
 		</p>
 
 		<h2 id="learnings">Free Time Learnings</h2>
 		<p>
-			Describe free time learnings, including Udemy, Coursera, etc.
-			Talk about the thoughts of each course.
+			As a human with curiosity, it's good that I live in an era that the only limitation for learning new knowledges is to have internet connection.
+			Youtube is a great sourse for learning, some of my favorite channels are:
+			3Blue1Brown, Real Engineering, Primer, SciShow, Veritasium, and Numberphile
+			Add few descriptions for above channels.
+			Besides Youtube channels, I also acquire the latest knowledge and skills on Udemy & Coursera.
+			Add some thoughts of each above courses.
 		</p>
 	</main>
 
 	<footer>
 		&copy; 2022
-		<a href = "mailto: mybenlo@umich.edu">mybenlo@umich.edu</a>
+		<a href="mailto:mybenlo@umich.edu">mybenlo@umich.edu</a>
 	</footer>
 </body>
 </html>

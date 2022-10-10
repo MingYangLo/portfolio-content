@@ -1,0 +1,139 @@
+h1{
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px;
+    text-align: center;
+}
+
+h2{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 10px auto;
+    text-align: center;
+}
+
+h3{
+    font-size: 20px;
+    font-weight: 600;
+    margin: 5px 20px;
+}
+
+p{
+    font-size: 16px;
+    line-height: 48px;
+    margin: 10px 20px;
+}
+
+img {
+    width: 445px;
+    height: 464px;
+    padding: 10px;
+    margin: 10px auto;
+    border: 10px dashed #6274dd;
+    align-self: center;
+    display: block;
+    justify-content:center ;  
+}
+
+figcaption{
+    text-align: center;
+}
+
+img:hover {
+    width: 667px;
+    height: 696px;
+    padding: 5px;
+    margin: 5px auto;
+    border: 10px solid red;
+}
+
+.currentPage {
+    font-weight: bolder;
+    color: white;
+    border-radius: 5px;
+    background-color: blue;
+}
+
+.insideNav{
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    text-indent: 5px
+}
+
+main a{
+    color: black;
+}
+main li{
+    margin: 10px 40px;
+    list-style-type: disc;
+}
+
+footer{
+    margin-top: 50px;
+}
+footer a{
+    color: blue;
+}
+
+/*Navigation*/
+.navbar{
+    width: 100%;
+    background-color: black;
+}
+.navbar::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+.logo{
+    font-size: 30px;
+    font-weight: 800;
+    color:white;
+    line-height: 40px;
+    padding-left: 10px;
+}
+.menu{
+    list-style: none;
+    margin-left: 30px;
+    position: relative;
+}
+.menu li{
+    display: inline-block;
+    background: black;
+    margin: 0 2px;
+    list-style: none;
+}
+.menu li:hover > .dropdown{
+    visibility: visible;
+}
+.menu a{
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    line-height: 60px;
+}
+.menu a:hover{
+    background-color: red;
+    border-radius: 5px;
+    box-shadow: 0 0 10px black, 0 0 10px black;
+}
+
+.dropdown{
+    position: absolute;
+    top: 60px;
+    visibility: hidden;
+}
+.dropdown li{
+    position: relative;
+    margin: 0px;
+    min-width: max-content;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid black;
+    list-style-type: none;
+}
+.dropdown a{
+    line-height: 50px;
+}
+
