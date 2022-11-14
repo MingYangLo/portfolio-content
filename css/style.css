@@ -99,12 +99,11 @@ p{
 }
 
 img {
-    width: 331px;
+    width: 332px;
     height: 345px;
     padding: 18px;
-    margin: 15px auto;
+    margin: 15px calc(50vw - 189px);
     border: 5px dashed #6274dd;
-    display: block;
 }
 
 figcaption{
@@ -141,7 +140,7 @@ main a{
     color: black;
 }
 
-main li{
+main li, aside li{
     margin: 10px 40px;
     list-style-type: disc;
 }
@@ -219,6 +218,10 @@ footer a{
     }
     .dropdown a{
         line-height: 50px;
+    }
+
+    .imageFlex img{
+        margin: 15px auto;
     }
 
     .imageFlex{
