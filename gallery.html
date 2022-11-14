@@ -7,36 +7,38 @@
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/d1dcea18cf.js" crossorigin="anonymous"></script>
 	<title>Gallery</title>
 </head>
 
-<body>
+<body class="flexContainer">
 	<header>
 		<nav class="navbar">
 			<div class="logo">Ming-Yang Lo</div>
 			<ul class="menu">
-				<li><a href="index.html">Homepage</a>
+				<li><a href="index.html"><i class="fa-solid fa-house fa-fw"></i>&nbsp;Homepage</a>
 					<ul class="dropdown">
-						<li><a href="index.html#aboutMe">About Me</a></li>
-						<li><a href="index.html#skills">Skills</a></li>
+						<li><a href="index.html#aboutMe"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;About Me</a></li>
+						<li><a href="index.html#skills"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Skills</a></li>
 					</ul>
 				</li>
-				<li><a href="experiences.html">Experiences</a>
+				<li><a href="experiences.html"><i class="fa-solid fa-suitcase fa-fw"></i>&nbsp;Experiences</a>
 					<ul class="dropdown">
-						<li><a href="experiences.html#workExperiences">Work Experiences</a></li>
-						<li><a href="experiences.html#learnings">Free Time Learnings</a></li>
+						<li><a href="experiences.html#workExperiences"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Work Experiences</a></li>
+						<li><a href="experiences.html#learnings"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Free Time Learnings</a></li>
 					</ul>
 				</li>
-				<li><a href="projects.html">Projects</a>
+				<li><a href="projects.html"><i class="fa-solid fa-flask fa-fw"></i>&nbsp;Projects</a>
 					<ul class="dropdown">
-						<li><a href="projects.html#EKF_PF">Extended Kalman Filter & Particle Filter</a></li>
-						<li><a href="projects.html#PointCloud">Point Cloud Registration</a></li>
+						<li><a href="projects.html#EKF_PF"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Extended Kalman Filter & Particle Filter</a></li>
+						<li><a href="projects.html#PointCloud"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Point Cloud Registration</a></li>
 					</ul>
 				</li>
-				<li><a href="gallery.html" class="currentPage">Gallery</a>
+				<li><a href="gallery.html" class="currentPage"><i class="fa-solid fa-image fa-fw"></i>&nbsp;Gallery</a>
 					<ul class="dropdown">
-						<li><a href="gallery.html#Yosemite">Yosemite</a></li>
-						<li><a href="gallery.html#NorthernMichigan"> Northern Michigan</a></li>
+						<li><a href="gallery.html#Yosemite"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Yosemite</a></li>
+						<li><a href="gallery.html#NorthernMichigan"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Northern Michigan</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -45,59 +47,79 @@
 
 	<main>
 		<h1>Gallery</h1>
+		
+		<h2 id='Yosemite'><br>Yosemite</h2>
 		<p>
-			This is a gallery page for my trips to <a href="#Yosemite">Yosemite</a> & <a href="#NorthernMichigan"> Northern Michigan</a>.  
+			Yosemite National Park is in the Sierra Nevada mountains of California. It is known for its waterfalls and many other natural landscapes. 
+			The displayed images are taken during my trip visiting Yosemite during the summer of 2022. 
+			Yosemite Falls was surprisingly packed with people, and if zoom in close enough, you could also see there were people climbing up the on the right side of the fall. 
+			Tenaya Lake and Tunnel View are cozy places where I felt relaxed seeing the view and feeling the breeze. 
+			The tree at Olmsted Point is on a big rock, I have to say that it took me quite some time to climb up with slippery shoes. 
+			Last but not least, Mono Lake is the first saline soda lake I have ever seen in my life.
 		</p>
-
-		<h2 id='Yosemite'>Yosemite</h2>
-		<p>
-			Yosemite National Park is in the Sierra Nevada mountains of California.
-			It is known for its waterfalls and many other natural landscapes.
-			The displayed images are taken during my trip visiting Yosemite (Yosemite Falls, Tenaya Lake, Olmsted Point, Tunnel View, and Mono Lake).
-		</p>
-		<figure>
-			<img src="images/YosemiteFalls.jpg" width="500" alt="Yosemite Falls image unavailable"/>
-			<figcaption>Yosemite Falls</figcaption>
-		</figure>
-		<figure>
-			<img src="images/TenayaLake.jpg" width="500" alt="Tenaya Lake image unavailable"/>
-			<figcaption>Tenaya Lake</figcaption>
-		</figure>
-		<figure>
-			<img src="images/OlmstedPoint.jpg" width="500" alt="Olmsted Point image unavailable"/>
-			<figcaption>Olmsted Point</figcaption>
-		</figure>
-		<figure>
-			<img src="images/TunnelView.jpg" width="500" alt="Tunnel View image unavailable"/>
-			<figcaption>Tunnel View with El Capitan on the left</figcaption>
-		</figure>
-		<figure>
-			<img src="images/MonoLake.jpg" width="500" alt="Mono Lake image unavailable"/>
-			<figcaption>Mono Lake</figcaption>
-		</figure>
+		<div class="imageFlex">
+			<figure>
+				<img src="images/YosemiteFalls.jpg" width="500" alt="Yosemite Falls image unavailable">
+				<figcaption>Yosemite Falls</figcaption>
+			</figure>
+			<figure>
+				<img src="images/TenayaLake.jpg" width="500" alt="Tenaya Lake image unavailable">
+				<figcaption>Tenaya Lake</figcaption>
+			</figure>
+			<figure>
+				<img src="images/OlmstedPoint.jpg" width="500" alt="Olmsted Point image unavailable">
+				<figcaption>Olmsted Point</figcaption>
+			</figure>
+			<figure>
+				<img src="images/TunnelView.jpg" width="500" alt="Tunnel View image unavailable">
+				<figcaption>Tunnel View with El Capitan on the left</figcaption>
+			</figure>
+			<figure>
+				<img src="images/MonoLake.jpg" width="500" alt="Mono Lake image unavailable">
+				<figcaption>Mono Lake</figcaption>
+			</figure>
+		</div>
 
 		<h2 id='NorthernMichigan'>Northern Michigan</h2>
 		<p>
-			Northern Michigan is known for its lakeview and many other natural landscapes.
-			The displayed images are taken during my trip visiting some parts of Northern Michigan (Silver Lake, Winery, and Lake Michell).
+			Northern Michigan is known for its lake views and many other natural landscapes. 
+			The displayed images were taken during my trip visiting some parts of Northern Michigan during the late summer of 2022. 
+			Being one of the large cities of Northern Michigan, Traverse City does have a lot to offer. It has amazing restaurants and several wineries. 
+			We went to Chateau Chantal Winery and Inn, which has a spectacular view and lovely wine selections. 
+			We also went on an exciting buggy ride at Silver Lake state park, my friends and I had a blast there. 
+			Our stay at a lodge was delightful, it has astonishing morning and sunset lake views of Lake Michell.
 		</p>
-		<figure>
-			<img src="images/SilverLakeBuggyRide.png" width="500" alt="Silver Lake Buggy Ride image unavailable"/>
-			<figcaption>Silver Lake Buggy Ride</figcaption>
-		</figure>
-		<figure>
-			<img src="images/ChateauChantalWinery.png" width="500" alt="Chateau Chantal Winery image unavailable"/>
-			<figcaption>Chateau Chantal Winery</figcaption>
-		</figure>
-		<figure>
-			<img src="images/LakeMitchellDock.png" width="500" alt="Lake Mitchell Dock image unavailable"/>
-			<figcaption>Backyard Dock facing Lake Mitchell</figcaption>
-		</figure>
+		<div class="imageFlex">
+			<figure>
+				<img src="images/SilverLakeBuggyRide.png" width="500" alt="Silver Lake Buggy Ride image unavailable">
+				<figcaption>Silver Lake Buggy Ride</figcaption>
+			</figure>
+			<figure>
+				<img src="images/ChateauChantalWinery.png" width="500" alt="Chateau Chantal Winery image unavailable">
+				<figcaption>Chateau Chantal Winery</figcaption>
+			</figure>
+			<figure>
+				<img src="images/LakeMitchellDock.png" width="500" alt="Lake Mitchell Dock image unavailable">
+				<figcaption>Backyard Dock facing Lake Mitchell</figcaption>
+			</figure>
+		</div>
+		
 	</main>
+
+	<aside>
+		<h3><br>More Information</h3>
+		<p>For Yosemite National Park, visit this <a href="https://en.wikipedia.org/wiki/Yosemite_National_Park">wiki page</a> to learn about its history, geography, and more. 
+			In addition, check out <a href="https://www.recreation.gov/timed-entry/10086745">this website</a> to book a resevation if planning to drive and visit during the peak time (typically 6 am to 4 pm).
+			As for Northern Michigan, this <a href="https://en.wikipedia.org/wiki/Northern_Michigan">wiki page</a> has lots of information about its geography, history, and even tourism destinations.
+			Besides, there are also many nearby states worth the visit, within a five-hour drive from the center of Michigan, one can visit well-known places such as Chicago, Cedar Point in Ohio, or even go visit Niagara Falls and Toronto across the border.
+			Last, don't forget to visit "The Big House", the football stadium for University of Michigan in Ann Arbor. It is the largest stadium in the United States.
+		</p>
+	</aside>
 
 	<footer>
 		&copy; 2022
-		<a href="mailto:mybenlo@umich.edu">mybenlo@umich.edu</a>
+		<a href="mailto:mybenlo@umich.edu"><i class="fa-solid fa-envelope fa-fw"></i>&nbsp;mybenlo@umich.edu</a>
 	</footer>
+
 </body>
 </html>

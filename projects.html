@@ -7,6 +7,8 @@
 	<link rel="icon" href="images/favicon.ico">
 	<link rel="stylesheet" href="css/html5reset.css">
 	<link rel="stylesheet" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/d1dcea18cf.js" crossorigin="anonymous"></script>
 	<title>Projects</title>
 </head>
 
@@ -15,28 +17,28 @@
 		<nav class="navbar">
 			<div class="logo">Ming-Yang Lo</div>
 			<ul class="menu">
-				<li><a href="index.html">Homepage</a>
+				<li><a href="index.html"><i class="fa-solid fa-house fa-fw"></i>&nbsp;Homepage</a>
 					<ul class="dropdown">
-						<li><a href="index.html#aboutMe">About Me</a></li>
-						<li><a href="index.html#skills">Skills</a></li>
+						<li><a href="index.html#aboutMe"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;About Me</a></li>
+						<li><a href="index.html#skills"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Skills</a></li>
 					</ul>
 				</li>
-				<li><a href="experiences.html">Experiences</a>
+				<li><a href="experiences.html"><i class="fa-solid fa-suitcase fa-fw"></i>&nbsp;Experiences</a>
 					<ul class="dropdown">
-						<li><a href="experiences.html#workExperiences">Work Experiences</a></li>
-						<li><a href="experiences.html#learnings">Free Time Learnings</a></li>
+						<li><a href="experiences.html#workExperiences"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Work Experiences</a></li>
+						<li><a href="experiences.html#learnings"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Free Time Learnings</a></li>
 					</ul>
 				</li>
-				<li><a href="projects.html" class="currentPage">Projects</a>
+				<li><a href="projects.html" class="currentPage"><i class="fa-solid fa-flask fa-fw"></i>&nbsp;Projects</a>
 					<ul class="dropdown">
-						<li><a href="projects.html#EKF_PF">Extended Kalman Filter & Particle Filter</a></li>
-						<li><a href="projects.html#PointCloud">Point Cloud Registration</a></li>
+						<li><a href="projects.html#EKF_PF"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Extended Kalman Filter & Particle Filter</a></li>
+						<li><a href="projects.html#PointCloud"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Point Cloud Registration</a></li>
 					</ul>
 				</li>
-				<li><a href="gallery.html">Gallery</a>
+				<li><a href="gallery.html"><i class="fa-solid fa-image fa-fw"></i>&nbsp;Gallery</a>
 					<ul class="dropdown">
-						<li><a href="gallery.html#Yosemite">Yosemite</a></li>
-						<li><a href="gallery.html#NorthernMichigan"> Northern Michigan</a></li>
+						<li><a href="gallery.html#Yosemite"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Yosemite</a></li>
+						<li><a href="gallery.html#NorthernMichigan"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Northern Michigan</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -45,63 +47,67 @@
 
 	<main>
 		<h1>Projects</h1>
-		<ul> 
-			<li><a href="#EKF_PF">State Estimation with Extended Kalman Filter (EKF) and Particle Filter (PF)</a></li>
-			<li><a href="#PointCloud">Point Cloud Processing: Point Cloud Registration Enhancement</a></li>
-		</ul>
-		<h2 id="EKF_PF">State Estimation with Extended Kalman Filter (EKF) and Particle Filter (PF)</h2>
+
+		<h2 id="EKF_PF"><br>State Estimation with Extended Kalman Filter (EKF) and Particle Filter (PF)</h2>
 		<p>
-			The main objective is to estimate an object's 3D position from two cameras using Extended Kalman Filter (EKF) and Particle Filter (PF) with sequential measurement update.
+			The main objective is to estimate an object's 3D position from two cameras using Extended Kalman Filter (EKF) and Particle Filter (PF) with sequential and batch measurement updates. 
+			Kalman filter is an approach based on recursice Bayesian filtering where the noise in the system is assumed Gaussian. 
+			Extended Kalman filter (EKF) is an extension of KT for non-linear systems where non-linearity are approxiamted using the first or second order derivative. 
+			The idea of the particle filter (PF) is based on Monte Carlo methods, which use particle sets to represent probabilities and can be used in any form of state space model. The core concept is to express its distribution by extracting random state particles from the posterior probability. 
+			The result was to able to reduced estimated position error by 2.1% and 7.3% respectively by using EKF and PF in batch measurement update than sequential measurement update. 
+			In addition, batch update performs better because for each update, it takes more information into consideration or it could be said that all information is incorporated into the filter at once.
+
 		</p>
 		<figure>
-			<img src="images/EKF_PF_problemSetup.PNG" width="500" alt="EKF & PF problem image unavailable"/>
+			<img src="images/EKF_PF_problemSetup.PNG" width="500" alt="EKF & PF problem image unavailable">
 			<figcaption>Problem setup for Extended Kalman Filter(EKF) & Particle Filter(PF)</figcaption>
 		</figure>
-		<p>
-			Extended Kalman filter vs Kalman filter?
-			Kalman filter is an approach based on recursice Bayesian filtering where the noise in the system is assumed Gaussian.
-			Extended Kalman filter (EKF) is an extension of KT for non-linear systems where non-linearity are approxiamted using the first or second order derivative. 
-			The idea of ​​the particle filter (PF) is based on Monte Carlo methods, which use particle sets to represent probabilities and can be used in any form of state space model. 
-			The core idea is to express its distribution by extracting random state particles from the posterior probability.
-			The result was to able to reduced estimated position error by 2.1% and 7.3% respectively by using batch measurement update.
-		</p>
 		<figure>
-			<img src="images/EKF_PF_results.PNG" width="500" alt="EKF & PF results image unavailable"/>
+			<img src="images/EKF_PF_results.PNG" width="500" alt="EKF & PF results image unavailable">
 			<figcaption>Results of Extended Kalman Filter(EKF) & Particle Filter(PF)</figcaption>
 		</figure>
 	
-
-		<h2 id="PointCloud">Point Cloud Processing: Point Cloud Registration Enhancement</h2>
+		<h2 id="PointCloud"><br>Point Cloud Processing: Point Cloud Registration Enhancement</h2>
 		<p>
 			The objective is to utilize Point Feature Histogram (PFH) and Iterative Closest Point (ICP) for enhancing point cloud registration.
-		</p>
-		<figure>
-			<img src="images/PCP_2Sets_initial.PNG" width="500" alt="2 sets of initial Point Cloud Processing image unavailable"/>
-			<figcaption>2 sets of initial point clouds</figcaption>
-		</figure>
-		<p>
 			Point clouds are often aligned with 3D models or with other point clouds, a process known as pointset registration. 
 			The aim is to find a rigid transformation among these point clouds.
-			Iterative closest point (ICP) is a powerful algorithm employed by a robot to accomplish these tasks by estimating pose variation between two successive data frames. 
+			Iterative closest point (ICP) is a powerful algorithm employed by a robot to accomplish this kind of tasks by minimize the difference between two clouds of points, often time by reducing the distances of point pairs.
 			However, the drawback of ICP is that it does not take geometric information into account and is sensitive to initial correspondences of the two point clouds.
 			This project solves the problems mentioned above by implementing another algorithm - Point Feature Histogram (PFH), which provides a better solution to registration since it incorporates more informative geometric features when matching the correspondence. 
 			To be more specific, the key component in PFH is to estimate surface normal and curvature for a point with its k-nearest neighbor and further formulate associate local features. 
 			These features enable us to find more the accuracy during the correspondence calculation process.
-			As for the result, we decreased 22% of total time through extracting key features with Intrinsic Shape Signature in a dense point cloud.
+			As for the result, we decreased 22% of total time through extracting key features in a dense point cloud.
 		</p>
 		<figure>
-			<img src="images/PCP_methodsCompare.PNG" width="500" alt="Point cloud methods compare image unavailable"/>
+			<img src="images/PCP_2Sets_initial.PNG" width="500" alt="2 sets of initial Point Cloud Processing image unavailable">
+			<figcaption>2 sets of initial point clouds</figcaption>
+		</figure>
+		<figure>
+			<img src="images/PCP_methodsCompare.PNG" width="500" alt="Point cloud methods compare image unavailable">
 			<figcaption>Comparison between different methods</figcaption>
 		</figure>
 		<figure>
-			<img src="images/PCP_2Sets_results.PNG" width="500" alt="2 sets of Point Cloud Processing result image unavailable"/>
+			<img src="images/PCP_2Sets_results.PNG" width="500" alt="2 sets of Point Cloud Processing result image unavailable">
 			<figcaption>Results of Point cloud processing</figcaption>
 		</figure>
 	</main>
 
+	<aside>
+		<h3><br>More Information</h3>
+		<p>
+			There is a <a href="https://www.kalmanfilter.net/kalmanmulti.html">wonderful website</a> that explains the Kalman filter, which takes easy steps from basic probability to multidimensional Kalman filter. 
+			After understanding the Kalman filter, it would take just a few minutes to read <a href="https://towardsdatascience.com/extended-kalman-filter-43e52b16757d">this article</a> to know how the extended Kalman filter works. 
+			On the other hand, the particle filter would be more intuitive to understand and less in doing math derivatives, I found <a href="https://towardsdatascience.com/particle-filter-on-localisation-9e0802282aaf">this article</a> that explains how this filter operates with code examples. 
+			For the iterative closest point method for point cloud registration, I would recommend anyone who wants to understand to watch <a href="https://www.youtube.com/watch?v=QWDM4cFdKrE&ab_channel=CyrillStachniss">this YouTube clip</a> made by Cyrill Stachniss, he created a series of high-quality videos on Robotics topics. 
+			In addition, the mentioned point feature histogram method could be found on <a href="https://pcl.readthedocs.io/projects/tutorials/en/latest/pfh_estimation.html">this website</a>, it is a fast and easy approach for extracting the key point of a dense point cloud.
+		</p>
+	</aside>
+
 	<footer>
 		&copy; 2022
-		<a href="mailto:mybenlo@umich.edu">mybenlo@umich.edu</a>
+		<a href="mailto:mybenlo@umich.edu"><i class="fa-solid fa-envelope fa-fw"></i>&nbsp;mybenlo@umich.edu</a>
 	</footer>
+
 </body>
 </html>
