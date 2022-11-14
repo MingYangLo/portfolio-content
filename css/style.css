@@ -1,22 +1,22 @@
 body{
     font-family: 'Aleo', sans-serif;
     background-image: url('../images/background_image.jpg');
-}/*Added*/
+}
 
 body:not(.flexContainer){
     display: grid;
     grid-template-rows: auto auto 350px 10vh;
     grid-template-areas: "header" "main" "aside" "footer";
-}/*Added*/
+}
 
 .flexContainer{
     display: flex;
     flex-direction: column;
-}/*Added*/
+}
 
 header{
     grid-area: header;
-}/*Added*/
+}
 
 aside{
     grid-area: aside;
@@ -42,13 +42,13 @@ aside{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     animation: colorChange 3s linear 4s infinite, slide 4s linear;
-}/*Added*/
+}
 
 @keyframes colorChange {
     to {
         background-position: 200% center;
     }
-}/*Added*/
+}
 
 @keyframes slide {
     0% {
@@ -62,14 +62,14 @@ aside{
         -webkit-text-fill-color: white;
         transform:translateX(0);
     }
-}/*Added*/
+}
 
 @media (prefers-reduced-motion: reduce){
     .logo{
         -webkit-text-fill-color: white;
         animation: none;
     }
-}/*Added*/
+}
 
 h1{
     font-size: 40px;
@@ -88,14 +88,15 @@ h2{
 h3{
     font-size: 20px;
     font-weight: 600;
-    margin: 15px 20px;
+    margin: 15px 30px;
 }
 
 p{
     font-size: 16px;
     line-height: 2;
-    margin: 10px 20px;
+    margin: 10px 30px;
     text-align: justify;
+    text-justify: inter-word;
 }
 
 img {
@@ -135,7 +136,7 @@ img:hover {
 
 /*Main*/
 main{
-    grid-area: main; /*Added*/
+    grid-area: main;
 }
 main a{
     color: black;
@@ -148,7 +149,8 @@ li{
 
 /*Footer*/
 footer{
-    grid-area: footer; /*Added*/
+    grid-area: footer;
+    margin-left: 10px;
 }
 footer a{
     color: blue;
