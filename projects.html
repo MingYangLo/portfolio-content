@@ -9,13 +9,24 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
 	<script src="https://kit.fontawesome.com/d1dcea18cf.js" crossorigin="anonymous"></script>
+	<!-- Google tag (gtag.js) -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV4CXS8QM4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-LV4CXS8QM4');
+	</script>
 	<title>Projects</title>
 </head>
 
-<body>
+<body id="projects">
+	<div class="skip"><a href="#mainContent">Skip to Content</a></div>
 	<header>
 		<nav class="navbar">
-			<div class="logo">Ming-Yang Lo</div>
+			<div class="logo">&emsp;<span style="--i:1">M</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">g</span>
+				<span style="--i:5">-</span><span style="--i:6">Y</span><span style="--i:7">a</span><span style="--i:8">n</span><span style="--i:9">g</span>
+				&nbsp;<span style="--i:10">L</span><span style="--i:11">o</span></div>
 			<ul class="menu">
 				<li><a href="index.html"><i class="fa-solid fa-house fa-fw"></i>&nbsp;Homepage</a>
 					<ul class="dropdown">
@@ -45,52 +56,60 @@
 		</nav>
 	</header>
 
-	<main>
-		<h1>Projects</h1>
+	<main id="mainContent">
+		<h1><span>Projects</span></h1>
 
-		<h2 id="EKF_PF"><br>State Estimation with Extended Kalman Filter (EKF) and Particle Filter (PF)</h2>
-		<p>
-			The main objective is to estimate an object's 3D position from two cameras using Extended Kalman Filter (EKF) and Particle Filter (PF) with sequential and batch measurement updates. 
-			Kalman filter is an approach based on recursice Bayesian filtering where the noise in the system is assumed Gaussian. 
-			Extended Kalman filter (EKF) is an extension of KT for non-linear systems where non-linearity are approxiamted using the first or second order derivative. 
-			The idea of the particle filter (PF) is based on Monte Carlo methods, which use particle sets to represent probabilities and can be used in any form of state space model. The core concept is to express its distribution by extracting random state particles from the posterior probability. 
-			The result was to able to reduced estimated position error by 2.1% and 7.3% respectively by using EKF and PF in batch measurement update than sequential measurement update. 
-			In addition, batch update performs better because for each update, it takes more information into consideration or it could be said that all information is incorporated into the filter at once.
+		<section>
+			<h2 id="EKF_PF">State Estimation with Extended Kalman Filter (EKF) and Particle Filter (PF)</h2>
+			<p>
+				The main objective is to estimate an object's 3D position from two cameras using Extended Kalman Filter (EKF) and Particle Filter (PF) with sequential and batch measurement updates. 
+				Kalman filter is an approach based on recursice Bayesian filtering where the noise in the system is assumed Gaussian. 
+				Extended Kalman filter (EKF) is an extension of KT for non-linear systems where non-linearity are approxiamted using the first or second order derivative. 
+				The idea of the particle filter (PF) is based on Monte Carlo methods, which use particle sets to represent probabilities and can be used in any form of state space model. The core concept is to express its distribution by extracting random state particles from the posterior probability. 
+				The result was to able to reduced estimated position error by 2.1% and 7.3% respectively by using EKF and PF in batch measurement update than sequential measurement update. 
+				In addition, batch update performs better because for each update, it takes more information into consideration or it could be said that all information is incorporated into the filter at once.
 
-		</p>
-		<figure>
-			<img src="images/EKF_PF_problemSetup.PNG" width="500" alt="EKF & PF problem image unavailable">
-			<figcaption>Problem setup for Extended Kalman Filter(EKF) & Particle Filter(PF)</figcaption>
-		</figure>
-		<figure>
-			<img src="images/EKF_PF_results.PNG" width="500" alt="EKF & PF results image unavailable">
-			<figcaption>Results of Extended Kalman Filter(EKF) & Particle Filter(PF)</figcaption>
-		</figure>
-	
-		<h2 id="PointCloud"><br>Point Cloud Processing: Point Cloud Registration Enhancement</h2>
-		<p>
-			The objective is to utilize Point Feature Histogram (PFH) and Iterative Closest Point (ICP) for enhancing point cloud registration.
-			Point clouds are often aligned with 3D models or with other point clouds, a process known as pointset registration. 
-			The aim is to find a rigid transformation among these point clouds.
-			Iterative closest point (ICP) is a powerful algorithm employed by a robot to accomplish this kind of tasks by minimize the difference between two clouds of points, often time by reducing the distances of point pairs.
-			However, the drawback of ICP is that it does not take geometric information into account and is sensitive to initial correspondences of the two point clouds.
-			This project solves the problems mentioned above by implementing another algorithm - Point Feature Histogram (PFH), which provides a better solution to registration since it incorporates more informative geometric features when matching the correspondence. 
-			To be more specific, the key component in PFH is to estimate surface normal and curvature for a point with its k-nearest neighbor and further formulate associate local features. 
-			These features enable us to find more the accuracy during the correspondence calculation process.
-			As for the result, we decreased 22% of total time through extracting key features in a dense point cloud.
-		</p>
-		<figure>
-			<img src="images/PCP_2Sets_initial.PNG" width="500" alt="2 sets of initial Point Cloud Processing image unavailable">
-			<figcaption>2 sets of initial point clouds</figcaption>
-		</figure>
-		<figure>
-			<img src="images/PCP_methodsCompare.PNG" width="500" alt="Point cloud methods compare image unavailable">
-			<figcaption>Comparison between different methods</figcaption>
-		</figure>
-		<figure>
-			<img src="images/PCP_2Sets_results.PNG" width="500" alt="2 sets of Point Cloud Processing result image unavailable">
-			<figcaption>Results of Point cloud processing</figcaption>
-		</figure>
+			</p>
+		</section>
+		<div class="imageFlex">
+			<figure>
+				<img src="images/EKF_PF_problemSetup.PNG" width="500" alt="EKF & PF problem image unavailable">
+				<figcaption><span>Problem setup for EKF & PF</span></figcaption>
+			</figure>
+			<figure>
+				<img src="images/EKF_PF_results.PNG" width="500" alt="EKF & PF results image unavailable">
+				<figcaption><span>Results of EKF & PF</span></figcaption>
+			</figure>
+		</div>
+		
+		<section>
+			<h2 id="PointCloud">Point Cloud Processing: Point Cloud Registration Enhancement</h2>
+			<p>
+				The objective is to utilize Point Feature Histogram (PFH) and Iterative Closest Point (ICP) for enhancing point cloud registration.
+				Point clouds are often aligned with 3D models or with other point clouds, a process known as pointset registration. 
+				The aim is to find a rigid transformation among these point clouds.
+				Iterative closest point (ICP) is a powerful algorithm employed by a robot to accomplish this kind of tasks by minimize the difference between two clouds of points, often time by reducing the distances of point pairs.
+				However, the drawback of ICP is that it does not take geometric information into account and is sensitive to initial correspondences of the two point clouds.
+				This project solves the problems mentioned above by implementing another algorithm - Point Feature Histogram (PFH), which provides a better solution to registration since it incorporates more informative geometric features when matching the correspondence. 
+				To be more specific, the key component in PFH is to estimate surface normal and curvature for a point with its k-nearest neighbor and further formulate associate local features. 
+				These features enable us to find more the accuracy during the correspondence calculation process.
+				As for the result, we decreased 22% of total time through extracting key features in a dense point cloud.
+			</p>
+		</section>
+		<div class="imageFlex">
+			<figure>
+				<img src="images/PCP_2Sets_initial.PNG" width="500" alt="2 sets of initial Point Cloud Processing image unavailable">
+				<figcaption><span>Sets of initial point clouds</span></figcaption>
+			</figure>
+			<figure>
+				<img src="images/PCP_methodsCompare.PNG" width="500" alt="Point cloud methods compare image unavailable">
+				<figcaption><span>Comparison between different methods</span></figcaption>
+			</figure>
+			<figure>
+				<img src="images/PCP_2Sets_results.PNG" width="500" alt="2 sets of Point Cloud Processing result image unavailable">
+				<figcaption><span>Results of point cloud processing</span></figcaption>
+			</figure>
+		</div>
 	</main>
 
 	<aside>
@@ -105,8 +124,7 @@
 	</aside>
 
 	<footer>
-		&copy; 2022
-		<a href="mailto:mybenlo@umich.edu"><i class="fa-solid fa-envelope fa-fw"></i>&nbsp;mybenlo@umich.edu</a>
+		<br>&copy; 2022 Ming-Yang Lo
 	</footer>
 
 </body>

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!-- All of the meta data for the page belongs in the header tag -->
+<!- All of the meta data for the page belongs in the header tag ->
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +9,24 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
 	<script src="https://kit.fontawesome.com/d1dcea18cf.js" crossorigin="anonymous"></script>
+	<!- Google tag (gtag.js) ->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV4CXS8QM4"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+		gtag('config', 'G-LV4CXS8QM4');
+	</script>
 	<title>Homepage</title>
 </head>
 
-<body>
+<body id="homepage">
+	<div class="skip"><a href="#mainContent">Skip to Content</a></div>
 	<header>
 		<nav class="navbar">
-			<div class="logo">Ming-Yang Lo</div>
+			<div class="logo">&emsp;<span style="--i:1">M</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">g</span>
+				<span style="--i:5">-</span><span style="--i:6">Y</span><span style="--i:7">a</span><span style="--i:8">n</span><span style="--i:9">g</span>
+				&nbsp;<span style="--i:10">L</span><span style="--i:11">o</span></div>
 			<ul class="menu">
 				<li><a href="index.html" class="currentPage"><i class="fa-solid fa-house fa-fw"></i>&nbsp;Homepage</a>
 					<ul class="dropdown">
@@ -45,36 +56,38 @@
 		</nav>
 	</header>
 
-	<main>
-		<h1>Homepage</h1>
-		
+	<main id="mainContent">
+		<h1><span>Homepage</span></h1>
 		<figure>
 			<img src="images/profile.jpg" width="500" alt="Profile image unavailable">
 		</figure>
+		<section>
+			<h2 id="aboutMe">About Me</h2>
+			<p>
+				I am Ming-Yang Lo, a current Master's student studying Electrical & Computing Engineering. 
+				In my Bachelor's years, I double majored in Computer Science & Mechanical Engineering. 
+				I got several internships and project experiences across multiple domains from software to hardware.
+				Programming is one of the things I always found of. It's fascinating that through programming I could put ideas and newly acquired knowledge into practice with little cost of time and price. 
+				I am currently open to software and embedded engineering job opportunities within the United States. 
+				If you have a good opportunity that matches my skills and experience then don't hesitate to contact me by filling out the form in this page.
+			</p>
+		</section>
+		<section>
+			<h2 id="skills">Skills</h2>
+			<p>
+				My skills are wide-ranging, spanning across multiple disciplines. 
+				Based on my academic and work experience, my skills areas are mainly surrounding Computer Science, Electrical & Computer Engineering, and Mechanical Engineering. 
+				The first programming language I learned is C++, and that is also the one I am most familiar with. 
+				C# is another programming language I like to use, especially when needed to create a graphical user interface. 
+				Python is mostly for machine learning & deep learning, it has great libraries & frameworks like Pytorch which I used for deep learning in computer vision. 
+				SolidWorks is a great tool for mechanical drafting and doing physical simulations, which makes sure everything went well before submitting it for production.
+			</p>
+		</section>
 
-		<h2 id="aboutMe"><br>About Me</h2>
-		<p>
-			I am Ming-Yang Lo, a current Master's student studying Electrical & Computing Engineering. 
-			In my Bachelor's years, I double majored in Computer Science & Mechanical Engineering. 
-			I got several internship and project experiences across multiple domains from software to hardware.
-			Programming is one of the things I always found of. It's fascinating that through programming I could put ideas and newly acquired knowledge into practice with little cost of time and price. 
-			I am currently open to software and embedded engineering job opportunities within the United States. 
-			If you have a good opportunity that matches my skills and experience then don't hesitate to contact me with the email link at the bottom of this page.
-		</p>
-
-		<h2 id="skills"><br>Skills</h2>
-		<p>
-			My skills are wide-ranging, spanning across multiple disciplines. 
-			Based on my academic and work experience, my skills areas are mainly surrounding Computer Science, Electrical & Computer Engineering, and Mechanical Engineering. 
-			The first programming language I learned is C++, and that is also the one I am most familiar with. 
-			C# is another programming language I like to use, especially when needed to create a graphical user interface. 
-			Python is mostly for machine learning & deep learning, it has great libraries & frameworks like Pytorch which I used for deep learning in computer vision. 
-			SolidWorks is a great tool for mechanical drafting and doing physical simulations, which makes sure everything went well before submitting it for production.
-		</p>
 	</main>
 
 	<aside>
-		<h3><br>Programming Languages most familiar with:</h3>
+		<h3>Programming Languages:</h3>
 		<ul>
 			<li>C++</li>
 			<li>C#</li>
@@ -82,7 +95,7 @@
 			<li>Java</li>
 			<li>R</li>
 		</ul>
-		<h3>Toolkits & Frameworks most familiar with:</h3>
+		<h3>Toolkits & Frameworks:</h3>
 		<ul>
 			<li>Linux</li>
 			<li>Git</li>
@@ -91,9 +104,20 @@
 		</ul>
 	</aside>
 
+	<form action="https://formspree.io/f/moqbgard" method="POST">
+			<label>
+				<span>Your email:</span>
+				<br><input type="email" name="email" placeholder="example@mail.com">
+			</label><br><br>
+			<label>
+				<span>Your message:</span>
+				<br><textarea name="message" placeholder="message..."></textarea>
+			</label><br>
+			<button type="submit">Send</button>
+		</form>
+
 	<footer>
-		<br>&copy; 2022
-		<a href="mailto:mybenlo@umich.edu"><i class="fa-solid fa-envelope fa-fw"></i>&nbsp;mybenlo@umich.edu</a>
+		<br>&emsp;&copy; 2022 Ming-Yang Lo
 	</footer>
 </body>
 </html>
