@@ -37,7 +37,7 @@ header{
 h1{
     font-size: 40px;
     font-weight: bold;
-    margin: 10px;
+    margin: 20px;
     text-align: center;
 }
 
@@ -326,11 +326,11 @@ footer{
         margin: 0;
         position: absolute;
         left: calc(50vw - 189px);
-        margin-top: 70px;
+        margin-top: 80px;
     }
     #homepage h1{
         text-align: unset;
-        margin: 10px 0;
+        margin: 20px 0;
         position: absolute;
         left: calc(50vw - 99px);
     }
@@ -383,7 +383,7 @@ footer{
     }
     #projects h1{
         text-align: unset;
-        margin: 10px 0;
+        margin: 20px 0;
         position: absolute;
         left: calc(50vw - 99px);
     }
