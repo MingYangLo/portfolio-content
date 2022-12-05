@@ -34,17 +34,6 @@ header{
     }
 }
 
-@media (prefers-reduced-motion: reduce){
-    .logo{
-        animation: none;
-    }
-
-    .skip a{
-        -webkit-transition: none;
-        transition: none;
-    }
-}
-
 h1{
     font-size: 40px;
     font-weight: bold;
@@ -112,6 +101,19 @@ img:hover {
     color: white;
     border-radius: 5px;
     background-color: blue;
+    animation: slightBling 4s infinite;
+}
+
+@keyframes slightBling {
+    0%{
+        border: 0px;
+    }
+    50%{
+        border: 2px red dashed;
+    }
+    100%{
+        border: 0px;
+    }
 }
 
 .insideNav{
@@ -249,6 +251,21 @@ footer{
 }
 .dropdown a{
     line-height: 40px;
+}
+
+@media (prefers-reduced-motion: reduce){
+    .logo span{
+        animation: none;
+    }
+
+    .currentPage{
+        animation: none;
+    }
+
+    .skip a{
+        -webkit-transition: none;
+        transition: none;
+    }
 }
 
 /*Tablet*/

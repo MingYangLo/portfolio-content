@@ -2,14 +2,7 @@
 <html lang="en">
 <!- All of the meta data for the page belongs in the header tag ->
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="icon" href="images/favicon.ico">
-	<link rel="stylesheet" href="css/html5reset.css">
-	<link rel="stylesheet" href="css/style.css">
-	<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
-	<script src="https://kit.fontawesome.com/d1dcea18cf.js" crossorigin="anonymous"></script>
-	<!- Google tag (gtag.js) ->
+	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV4CXS8QM4"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
@@ -17,6 +10,13 @@
 		gtag('js', new Date());
 		gtag('config', 'G-LV4CXS8QM4');
 	</script>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" href="images/favicon.ico">
+	<link rel="stylesheet" href="css/html5reset.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
+	<script src="https://kit.fontawesome.com/d1dcea18cf.js" crossorigin="anonymous"></script>
 	<title>Homepage</title>
 </head>
 
@@ -83,8 +83,22 @@
 				SolidWorks is a great tool for mechanical drafting and doing physical simulations, which makes sure everything went well before submitting it for production.
 			</p>
 		</section>
-
+		
 	</main>
+
+	<div role="form">
+		<form action="https://formspree.io/f/moqbgard" method="POST">
+			<label>
+				<span>Your email:</span>
+				<br><input type="email" name="email" placeholder="example@mail.com" tabindex="-1">
+			</label><br><br>
+			<label>
+				<span>Your message:</span>
+				<br><textarea name="message" placeholder="message..." tabindex="-1"></textarea>
+			</label><br>
+			<button type="submit" tabindex="-1">Send</button>
+		</form>
+	</div>
 
 	<aside>
 		<h3>Programming Languages:</h3>
@@ -103,18 +117,6 @@
 			<li>SolidWorks</li>
 		</ul>
 	</aside>
-
-	<form action="https://formspree.io/f/moqbgard" method="POST">
-			<label>
-				<span>Your email:</span>
-				<br><input type="email" name="email" placeholder="example@mail.com">
-			</label><br><br>
-			<label>
-				<span>Your message:</span>
-				<br><textarea name="message" placeholder="message..."></textarea>
-			</label><br>
-			<button type="submit">Send</button>
-		</form>
 
 	<footer>
 		<br>&emsp;&copy; 2022 Ming-Yang Lo
