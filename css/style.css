@@ -374,12 +374,12 @@ footer{
         grid-column: 2/-1;
     }
     #projects aside{
-        margin-top: 70px;
+        margin-top: 80px;
         grid-row: 2/2;
         grid-column: 1/span 1;
     }
     #projects #section_one{
-        margin-top: 70px;
+        margin-top: 80px;
     }
     #projects h1{
         text-align: unset;
