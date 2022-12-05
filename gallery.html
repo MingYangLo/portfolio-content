@@ -17,10 +17,11 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
 	<script src="https://kit.fontawesome.com/d1dcea18cf.js" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
 	<title>Gallery</title>
 </head>
 
-<body class="flex_container">
+<body class="gallery">
 	<div class="skip"><a href="#main_content">Skip to Content</a></div>
 	<header>
 		<nav class="navbar">
@@ -120,6 +121,16 @@
 		</div>
 		
 	</main>
+
+	<div role="form" id="gallery_form">
+		<form action="https://formspree.io/f/moqbgard" method="POST">
+			<label>
+				<span>Where to go next?</span>
+				<br><textarea name="recommendation" placeholder="Places recommendations..." tabindex="-1" onkeydown="textAreaHeightAdjust(this)" required></textarea>
+			</label><br>
+			<button type="submit" tabindex="-1">Send</button>
+		</form>
+	</div>
 
 	<footer>
 		<br>&copy; 2022 Ming-Yang Lo

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<!- All of the meta data for the page belongs in the header tag ->
+<!-- All of the meta data for the page belongs in the header tag -->
 <head>
 	<!-- Google tag (gtag.js) -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=G-LV4CXS8QM4"></script>
@@ -17,6 +17,7 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
 	<script src="https://kit.fontawesome.com/d1dcea18cf.js" crossorigin="anonymous"></script>
+	<script src="js/script.js"></script>
 	<title>Homepage</title>
 </head>
 
@@ -86,15 +87,15 @@
 		
 	</main>
 
-	<div role="form" id="form">
-		<form action="https://formspree.io/f/moqbgard" method="POST">
+	<div role="form" id="homepage_form">
+		<form action="https://formspree.io/f/moqbgard" method="POST" onsubmit="return emailValidation(this);">
 			<label>
 				<span>Your email:</span>
-				<br><input type="email" name="email" placeholder="example@mail.com" tabindex="-1">
+				<br><input type="email" name="email" placeholder="example@mail.com" tabindex="-1" required>
 			</label><br><br>
 			<label>
 				<span>Your message:</span>
-				<br><textarea name="message" placeholder="message..." tabindex="-1"></textarea>
+				<br><textarea name="message" placeholder="message..." tabindex="-1" onkeydown="textAreaHeightAdjust(this)"></textarea>
 			</label><br>
 			<button type="submit" tabindex="-1">Send</button>
 		</form>
