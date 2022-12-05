@@ -21,48 +21,48 @@
 </head>
 
 <body id="homepage">
-	<div class="skip"><a href="#mainContent">Skip to Content</a></div>
+	<div class="skip"><a href="#main_content">Skip to Content</a></div>
 	<header>
 		<nav class="navbar">
 			<div class="logo">&emsp;<span style="--i:1">M</span><span style="--i:2">i</span><span style="--i:3">n</span><span style="--i:4">g</span>
 				<span style="--i:5">-</span><span style="--i:6">Y</span><span style="--i:7">a</span><span style="--i:8">n</span><span style="--i:9">g</span>
 				&nbsp;<span style="--i:10">L</span><span style="--i:11">o</span></div>
 			<ul class="menu">
-				<li><a href="index.html" class="currentPage"><i class="fa-solid fa-house fa-fw"></i>&nbsp;Homepage</a>
+				<li><a href="index.html" class="current_page"><i class="fa-solid fa-house fa-fw"></i>&nbsp;Homepage</a>
 					<ul class="dropdown">
-						<li><a href="index.html#aboutMe"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;About Me</a></li>
+						<li><a href="index.html#about_me"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;About Me</a></li>
 						<li><a href="index.html#skills"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Skills</a></li>
 					</ul>
 				</li>
 				<li><a href="experiences.html"><i class="fa-solid fa-suitcase fa-fw"></i>&nbsp;Experiences</a>
 					<ul class="dropdown">
-						<li><a href="experiences.html#workExperiences"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Work Experiences</a></li>
+						<li><a href="experiences.html#work_experiences"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Work Experiences</a></li>
 						<li><a href="experiences.html#learnings"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Free Time Learnings</a></li>
 					</ul>
 				</li>
-				<li><a href="projects.html"><i class="fa-solid fa-flask fa-fw"></i>&nbsp;Projects</a>
+				<li><a href="projects.html" id="project_nav"><i class="fa-solid fa-flask fa-fw"></i>&nbsp;Projects</a>
 					<ul class="dropdown">
-						<li><a href="projects.html#EKF_PF"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Extended Kalman Filter & Particle Filter</a></li>
-						<li><a href="projects.html#PointCloud"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Point Cloud Registration</a></li>
+						<li><a href="projects.html#ekf_pf"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Extended Kalman Filter & Particle Filter</a></li>
+						<li><a href="projects.html#point_cloud"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Point Cloud Registration</a></li>
 					</ul>
 				</li>
 				<li><a href="gallery.html"><i class="fa-solid fa-image fa-fw"></i>&nbsp;Gallery</a>
 					<ul class="dropdown">
-						<li><a href="gallery.html#Yosemite"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Yosemite</a></li>
-						<li><a href="gallery.html#NorthernMichigan"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Northern Michigan</a></li>
+						<li><a href="gallery.html#yosemite"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Yosemite</a></li>
+						<li><a href="gallery.html#northern_michigan"><i class="fa-solid fa-arrow-right fa-fw"></i>&nbsp;Northern Michigan</a></li>
 					</ul>
 				</li>
 			</ul>
 		</nav>
 	</header>
 
-	<main id="mainContent">
+	<main id="main_content">
 		<h1><span>Homepage</span></h1>
 		<figure>
 			<img src="images/profile.jpg" width="500" alt="Profile image unavailable">
 		</figure>
-		<section>
-			<h2 id="aboutMe">About Me</h2>
+		<section id="section_one">
+			<h2 id="about_me">About Me</h2>
 			<p>
 				I am Ming-Yang Lo, a current Master's student studying Electrical & Computing Engineering. 
 				In my Bachelor's years, I double majored in Computer Science & Mechanical Engineering. 
@@ -86,7 +86,7 @@
 		
 	</main>
 
-	<div role="form">
+	<div role="form" id="form">
 		<form action="https://formspree.io/f/moqbgard" method="POST">
 			<label>
 				<span>Your email:</span>
