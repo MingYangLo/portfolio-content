@@ -125,10 +125,11 @@
 	<div role="form" id="gallery_form">
 		<form action="https://formspree.io/f/moqbgard" method="POST">
 			<label>
-				<span>Where to go next?</span>
+				<span id="clickable"><i class="fa-regular fa-square-caret-up fa-fw" id="up"></i><i class="fa-regular fa-square-caret-down fa-fw" id="down"></i>&nbsp;Where to go next?&nbsp;<i class="fa-regular fa-square-caret-down fa-fw" id="down_two"></i><i class="fa-regular fa-square-caret-up fa-fw" id="up_two"></i></span>
 				<br><textarea name="recommendation" placeholder="Places recommendations..." tabindex="-1" onkeydown="textAreaHeightAdjust(this)" required></textarea>
 			</label><br>
 			<button type="submit" tabindex="-1">Send</button>
+			<script src="js/script.js"></script>
 		</form>
 	</div>
 

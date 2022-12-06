@@ -210,6 +210,10 @@ form button{
     font-weight: bold;
 }
 
+#up, #up_two, #down, #down_two{
+    display: none;
+}
+
 aside{
     grid-area: 3/1/3/-1;
     background-color: #fad4c8;
@@ -443,8 +447,14 @@ footer{
         bottom: 0px;
         right: 0px;
     }
+    #gallery_form span{
+        font-size: 18px;
+    }
     #gallery_form textarea{
         width: 25vw;
+    }
+    #down, #down_two{
+        display: initial;
     }
     
 }
