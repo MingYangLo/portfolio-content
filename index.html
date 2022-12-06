@@ -17,7 +17,6 @@
 	<link rel="stylesheet" href="css/style.css">
 	<link href='https://fonts.googleapis.com/css?family=Aleo' rel='stylesheet'>
 	<script src="https://kit.fontawesome.com/d1dcea18cf.js" crossorigin="anonymous"></script>
-	<script src="js/script.js"></script>
 	<title>Homepage</title>
 </head>
 
@@ -90,7 +89,7 @@
 	<div role="form" id="homepage_form">
 		<form action="https://formspree.io/f/moqbgard" method="POST" onsubmit="return emailValidation(this);">
 			<label>
-				<span>Your email:</span>
+				<span id="clickable">Your email:</span>
 				<br><input type="email" name="email" placeholder="example@mail.com" tabindex="-1" required>
 			</label><br><br>
 			<label>
@@ -100,6 +99,7 @@
 			<button type="submit" tabindex="-1">Send</button>
 		</form>
 	</div>
+	<script src="js/script.js"></script>
 
 	<aside>
 		<h3>Programming Languages:</h3>
